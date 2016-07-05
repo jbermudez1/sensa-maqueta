@@ -1,0 +1,43 @@
+@import 'nib'
+// global vars
+
+$width-menu = 20em
+$prymariColor = #383680
+$bglightColor = #F5F5F5
+$topWrap = 2em
+$paddinWrap = 2em
+body
+	background-color red
+	height 100vh
+	
+.wrap
+	background-color lime
+	height 100vh
+	display flex
+	.menu
+		background-color $prymariColor
+		width $width-menu
+		&__wrap
+			&-top
+				background-color pink
+				height $topWrap
+				padding $paddinWrap
+	.main
+		background-color $bglightColor
+		display flex
+		flex-grow 2
+		&__wrap
+			width 100%
+			&-top
+				height $topWrap
+				padding $paddinWrap
+	.aside
+		background-color blue
+		width $width-menu
+		&__wrap
+			&-top
+				background-color lime
+				height $topWrap
+				padding $paddinWrap
+
+@import './components/container/index.styl'
