@@ -1,43 +1,83 @@
 @import 'nib'
 // global vars
 
-$width-menu = 20em
+$width-menu-lg = 20em
+$width-menu-xs = 15em
+
 $prymariColor = #383680
 $bglightColor = #F5F5F5
 $topWrap = 2em
 $paddinWrap = 2em
-body
+
+// 
+$screen-sm-min = 768px
+$screen-md-min= 992px
+$screen-lg-min = 1200px
+body,html
 	background-color red
-	height 100vh
+	max-height 100vh
 	
 .wrap
-	background-color lime
 	height 100vh
 	display flex
-	.menu
-		background-color $prymariColor
-		width $width-menu
-		&__wrap
-			&-top
-				background-color pink
-				height $topWrap
-				padding $paddinWrap
-	.main
-		background-color $bglightColor
+	.menu,.main,.aside
 		display flex
-		flex-grow 2
+		flex-flow column
+		position absolute
+		// width 100%
+		height 100vh
 		&__wrap
-			width 100%
+			display flex
+			flex-flow column
+			flex-basis 100%
 			&-top
 				height $topWrap
 				padding $paddinWrap
-	.aside
-		background-color blue
-		width $width-menu
+	.menu
+		width $width-menu-xs
+		position absolute
+		z-index 10
+		transform translate3d(-100%, 0, 0)
 		&__wrap
 			&-top
 				background-color lime
-				height $topWrap
-				padding $paddinWrap
+	.aside
+		width $width-menu-xs
+		background-color orange
+		right 0
+		z-index 11
+		background-color pink
+		// transform translate3d(100%, 0, 0)
+		display none
+	.main
+		flex-grow 2
+		width 100%
+		background-color $bglightColor
+
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm-min) 
+
+// /* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min)
+	.wrap
+		.menu,.main,.aside
+			position relative !important
+		.main
+			width 1%
+		.menu
+			transform translate3d(0, 0, 0)
+		.aside
+			display flex
+
+// /* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min)
+	.wrap
+		.menu
+			width $width-menu-lg
+			
+		.aside
+			width $width-menu-lg
 
 @import './components/container/index.styl'
+@import './components/nav/index.styl'
+

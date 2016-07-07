@@ -1,0 +1,43 @@
+$circleWidth = 7em
+$circleWidth-xs = 5em
+
+.nav
+	// display flex
+	height 100%
+	flex-grow 2
+	padding $paddinWrap
+	background-color $prymariColor
+	&__sections-wrap
+		display flex
+		width 100%
+		.circle-wrap
+			display flex
+			width 50%
+			justify-content center
+			.circle
+				width $circleWidth-xs
+				height $circleWidth-xs
+				border-radius 10em
+				border solid 1px white
+				display flex
+				justify-content center
+				align-items center
+				background-color $prymariColor
+				transition all 0.5s ease
+				&:hover
+					box-shadow 3px 1px 10px black
+					
+@media (min-width: $screen-lg-min)
+	.nav
+		&__sections-wrap
+			.circle-wrap
+				.circle
+					width $circleWidth
+					height $circleWidth
+					
+					
+				
+			
+		
+		
+
