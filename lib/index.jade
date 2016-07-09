@@ -10,13 +10,23 @@ html
 		.wrap
 			.menu
 				.menu__wrap
-					.menu__wrap-top top menu
+					.menu__wrap-top.topnav
+						img.img-responsive.brand(src="img/sensalogo.svg")
 					//- .nav nav
 					include ./components/nav/index.jade
 			.main
 				.main__wrap
-					.main__wrap-top top
+					.main__wrap-top.top-main
+						div.icon-menu.molile-element a
+						div.title
+							h1.title-main Cotizar Productos
+								span Seleccione los prouductos a cotizar
+						div.icon-checkout.molile-element b
 					include ./components/container/index.jade
+						
 			.aside
 				.aside__wrap
 					.aside__wrap-top top aside 
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='js/app.js')
+
