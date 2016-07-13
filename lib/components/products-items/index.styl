@@ -1,0 +1,57 @@
+.products
+	.item
+		display flex
+		flex-flow column
+		margin-top 0.5em
+		border-bottom solid 1px lightgray
+		padding-bottom 0.2em
+		.img
+			background-color gray
+			padding 0.3em
+			.product-img
+				width 5em
+				height 4em
+			
+
+		.description
+			flex-grow 2
+			display flex
+			margin-left 1em
+			justify-content space-between
+			.product-name
+				display flex
+				color #808080
+				font-weight 100
+				margin 0
+				flex-grow 2
+			.price
+				color #808080
+				font-weight 100
+				margin 0
+			.small
+				color gray
+			.count
+				display flex
+				align-items center
+				button
+					border-radius 10em
+					border 0
+					color gray
+				input
+					width 3em
+					margin-left 0.5em
+					margin-right 0.5em
+					
+		.add
+			margin-left 1em
+			button.add
+				width 4em
+				height 4em
+				background-color $prymariColor
+				border 0
+				border-radius 10em
+				box-shadow 0 0 10px gray
+				color white
+/* Small devices (tablets, 768px and up) */
+// @media (min-width: $screen-sm-min)
+	
