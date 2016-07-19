@@ -6,27 +6,35 @@ html
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(href='css/normalize.css', rel='stylesheet')
 		link(href='css/index.css', rel='stylesheet')
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
 	body
 		.wrap
 			.menu
 				.menu__wrap
 					.menu__wrap-top.topnav
-						img.img-responsive.brand(src="img/sensalogo.svg")
+							img.img-responsive.brand(src="img/sensalogo.svg")
 					//- .nav nav
 					include ./components/nav/index.jade
 			.main
 				.main__wrap
 					.main__wrap-top.top-main
-						div.icon-menu.molile-element a
+						div.icon-menu.molile-element
+							i.fa.fa-bars(aria-hidden='true')
 						div.title
 							h1.title-main Cotizar Productos
 								span Seleccione los prouductos a cotizar
-						div.icon-checkout.molile-element b
+						div.icon-checkout.molile-element
+							i.fa.fa-angle-double-right(aria-hidden='true')
+
 					include ./components/container/index.jade
 						
 			.aside
 				.aside__wrap
-					.aside__wrap-top top aside 
+					.aside__wrap-top
+						.aside-title
+							span Tiene 2 cotizaciones guardadas.
+					include ./components/aside-products/index.jade
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
 		script(src='js/app.js')
 

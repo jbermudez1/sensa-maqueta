@@ -1,7 +1,8 @@
 .products
+	max-height 100vh
 	.item
 		display flex
-		flex-flow column
+		flex-flow column // change to row
 		margin-top 0.5em
 		border-bottom solid 1px lightgray
 		padding-bottom 0.2em
@@ -9,15 +10,16 @@
 			background-color gray
 			padding 0.3em
 			.product-img
-				width 5em
-				height 4em
-			
-
+				width 100% //5em
+				height 10em //5em
 		.description
 			flex-grow 2
 			display flex
-			margin-left 1em
+			flex-flow row 
+			flex-wrap wrap // change to no-wrap
+			margin-left 0em // change to 1
 			justify-content space-between
+			align-items center
 			.product-name
 				display flex
 				color #808080
@@ -28,30 +30,65 @@
 				color #808080
 				font-weight 100
 				margin 0
+				margin-top 1em // delete
+
 			.small
 				color gray
+				font-size 0.8em //change to 1em
 			.count
 				display flex
 				align-items center
+				margin-top 1em // delete
 				button
 					border-radius 10em
 					border 0
 					color gray
 				input
 					width 3em
+					border solid 1px lightgray
 					margin-left 0.5em
 					margin-right 0.5em
 					
 		.add
-			margin-left 1em
+			margin-left 0em //1em
+			margin-top 0.5em // delete
 			button.add
-				width 4em
-				height 4em
+				width 100% // 4em 
+				height 3em // 4em
 				background-color $prymariColor
 				border 0
-				border-radius 10em
+				// border-radius 10em
 				box-shadow 0 0 10px gray
 				color white
+				p
+					margin 0
 /* Small devices (tablets, 768px and up) */
-// @media (min-width: $screen-sm-min)
+@media (min-width: $screen-sm-min)
+	.products
+		.item
+			flex-flow row // change to row
+			.img
+				background-color gray
+				padding 0.3em
+				.product-img
+					width 5em //5em
+					height 5em //5em
+			.description
+				flex-wrap nowrap // change to no-wrap
+				margin-left 1em // change to 1
+				.price
+					margin-top 0em // delete
+				.small
+					font-size 0.9em //change to 1em
+				.count
+					margin-top 0em // delete
+			.add
+				margin-left 1em //1em
+				margin-top 0em // delete
+				button.add
+					width 4em // 4em 
+					height 4em // 4em
+					background-color $prymariColor
+					border 0
+					border-radius 10em
 	

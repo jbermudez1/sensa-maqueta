@@ -9,12 +9,12 @@ $bglightColor = #F5F5F5
 $topWrap = 2em
 $paddinWrap = 2em
 
-// 
+//
 $screen-sm-min = 768px
 $screen-md-min= 992px
 $screen-lg-min = 1200px
 body,html
-	background-color red
+	// background-color red
 	max-height 100vh
 .img-responsive
 	width 100%
@@ -51,7 +51,7 @@ body,html
 			&-top
 				background-color white
 	.aside
-		width 90%
+		width 100%
 		background-color orange
 		right 0
 		z-index 11
@@ -75,9 +75,20 @@ body,html
 			font-size 0.4em
 .top-main
 	display flex
-	
+	align-items center
+	position relative
 	.title
 		flex-grow 2
+	.icon-menu,.icon-checkout
+		position absolute
+		color red
+		font-size 2em
+	.icon-menu
+		left 0.1em
+		top 0.7em
+	.icon-checkout
+		right 0.1em
+		top 0.7em
 .topnav
 	display flex
 
@@ -126,5 +137,9 @@ footer
 @import './components/container/index.styl'
 @import './components/nav/index.styl'
 @import './components/products-items/index.styl'
+@import './components/login/index.styl'
+@import './components/aside-products/index.styl'
+
+
 
 

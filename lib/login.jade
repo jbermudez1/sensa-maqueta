@@ -1,0 +1,52 @@
+doctype
+html
+	head
+		title Sensa
+		meta(charset="utf-8")
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='css/normalize.css', rel='stylesheet')
+		link(href='css/index.css', rel='stylesheet')
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
+	body
+		main.login
+			div.login-box#loginform
+				img.clientesensa(src="img/sensaclientes.png")
+				form()
+					div.inputgroup
+						label Número de Cliente
+						input()
+					div.inputgroup
+						label Contraseña
+						input()
+					button.enterlogin Entrar
+			//- box for access
+			div.login-box#access
+				img.clientesensa(src="img/sensaclientes.png")
+				form()
+					div.inputgroup
+						label Número de Cliente
+						input()
+					div.inputgroup
+						label Región
+						input()
+					div.inputgroup
+						label Nombre Completo
+						input()
+					div.inputgroup
+						label Correo Electrónico
+						input()
+					div.inputgroup
+						label Puesto
+						input()
+					button.enterlogin Solicitar
+
+			div.pielogin
+				p ¿Aún no tienes acceso?, 
+					a#apply(href="#") solicitalo aquí
+				p
+					a(href="#")¿Olvidaste tu contraseña?
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='js/app.js')
+

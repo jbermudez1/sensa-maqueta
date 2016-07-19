@@ -1,0 +1,62 @@
+.aside-title
+	height 100%
+	justify-content center
+	display flex
+	align-items center
+	color gray
+	font-size 1.2em
+	text-align center
+.aside-products
+	.label
+		font-size 0.7em
+		color gray
+	border-top solid 1px lightgray
+	padding 1em
+	height 100%
+	display flex
+	flex-flow column
+	.items
+		text-align center
+		font-size 5em
+		font-weight 100
+		color $prymariColor
+		margin 0
+	ul.listproductos
+		overflow scroll
+		list-style none
+		margin 0
+		padding 0
+		li 
+			color gray
+			border-bottom solid 1px lightgray
+			height 2em
+			display flex
+			align-items center
+			.number
+				color $prymariColor
+				font-weight 700
+				margin 0.3em
+				widht 5em
+				padding 0.5em
+				border-radius 10em
+	.subtotal
+		display flex
+		flex-grow 2
+		justify-content center
+		>div
+			text-align center
+			widht 100%
+			align-self flex-end
+			
+			.total
+				font-size 2em
+				line-height 1em
+				padding 0
+				margin 0
+			.save
+				background-color $prymariColor
+				border 0
+				margin-top 1em
+				padding 1em
+				color white
+
